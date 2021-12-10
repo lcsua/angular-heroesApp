@@ -28,5 +28,9 @@
         </mat-autocomplete>
     </mat-form-field>
     </div>
-{{heroeSeleccionado | json}}
+
+<div *ngIf="heroeSeleccionado">
+    <app-heroe-tarjeta [heroe]="heroeSeleccionado"></app-heroe-tarjeta>
+    {{heroeSeleccionado | json}}
+</div>
 </div>
